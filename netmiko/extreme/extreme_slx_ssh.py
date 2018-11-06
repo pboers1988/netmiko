@@ -31,3 +31,6 @@ class ExtremeSlxSSH(CiscoSSHConnection):
         return super(ExtremeSlxSSH, self).save_config(
             cmd=cmd, confirm=confirm, confirm_response=confirm_response
         )
+
+    def run_command(self, cmd):
+        return self.send_command(cmd)
